@@ -181,7 +181,7 @@ export default {
   },
   methods: {
     getIntheaters() {
-      http.get("/api/movie/in_theaters").then(res => {
+      http.get(api.intheaters).then(res => {
         this.hotmovies = res.subjects;
         // console.log(res);
       });

@@ -1,7 +1,7 @@
 import axios from "axios-jsonp-pro";
 
 const service = axios.create({
-  baseURL: "http://api.douban.com",
+  baseURL: "https://api.douban.com",
   timeout: 10 * 1000
 });
 
