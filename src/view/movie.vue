@@ -1,10 +1,10 @@
 <template>
   <div class="wrapper" ref="wrapper">
-    <div v-for="item in hotmovies" :key="item.id" style="width:100px;height:100px">
+    <!-- <div v-for="item in hotmovies" :key="item.id" style="width:100px;height:100px">
       <img :src="item.images.small" alt="">
-    </div>
-
-    <!-- <ul>
+    </div> -->
+    <div>hhh</div>
+    <ul>
       <li>
         <section>
           <div class="hot">
@@ -144,7 +144,7 @@
           <div class="footer-detail">去 App Store 免费下载 iOS 客户端</div>
         </section>
       </li>
-    </ul> -->
+    </ul>
   </div>
 </template>
 
