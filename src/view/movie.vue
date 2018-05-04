@@ -1,150 +1,149 @@
 <template>
-  <div class="wrapper" ref="wrapper">
-    <!-- <div v-for="item in hotmovies" :key="item.id" style="width:100px;height:100px">
-      <img :src="item.images.small" alt="">
-    </div> -->
-    <div>hhh</div>
-    <ul>
-      <li>
-        <section>
-          <div class="hot">
-            <div class="hot-title">
-              <div class="hot-title-left">影院热映</div>
-              <div class="hot-title-right">更多</div>
+  <div>
+    <div>hhhhhh</div>
+    <div class="wrapper" ref="wrapper">
+      <ul>
+        <li>
+          <section>
+            <div class="hot">
+              <div class="hot-title">
+                <div class="hot-title-left">影院热映</div>
+                <div class="hot-title-right">更多</div>
+              </div>
+              <div class="hot-content">
+                <ul>
+                  <li v-for="item in hotmovies" :key="item.id">
+                    <img class="hot-content-item-images" :src="item.images.small" style="width:100px;height:142px;">
+                    <div class="hot-content-item-title">{{item.title}}</div>
+                    <div class="hot-content-item-score" id="hh">{{item.rating.average}}</div>
+                    <div class="hot-content-item-rank" :style="styleObject">
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div class="hot-content">
-              <ul>
-                <li v-for="item in hotmovies" :key="item.id">
-                  <img class="hot-content-item-images" :src="item.images.small" style="width:100px;height:142px;">
-                  <div class="hot-content-item-title">{{item.title}}</div>
-                  <div class="hot-content-item-score" id="hh">{{item.rating.average}}</div>
-                  <div class="hot-content-item-rank" :style="styleObject">
-                  </div>
-                </li>
-              </ul>
+          </section>
+        </li>
+        <li>
+          <section>
+            <div class="hot">
+              <div class="hot-title">
+                <div class="hot-title-left">影院热映</div>
+                <div class="hot-title-right">更多</div>
+              </div>
+              <div class="hot-content">
+                <ul>
+                  <li v-for="item in hotmovies" :key="item.id">
+                    <img class="hot-content-item-images" :src="item.images.small" style="width:100px;height:142px;">
+                    <div class="hot-content-item-title">{{item.title}}</div>
+                    <div class="hot-content-item-score">{{item.rating.average}}</div>
+                    <div class="hot-content-item-rank" :style="styleObject">
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
-        </section>
-      </li>
-      <li>
-        <section>
-          <div class="hot">
-            <div class="hot-title">
-              <div class="hot-title-left">影院热映</div>
-              <div class="hot-title-right">更多</div>
+          </section>
+        </li>
+        <li>
+          <section>
+            <div class="hot">
+              <div class="hot-title">
+                <div class="hot-title-left">影院热映</div>
+                <div class="hot-title-right">更多</div>
+              </div>
+              <div class="hot-content">
+                <ul>
+                  <li v-for="item in hotmovies" :key="item.id">
+                    <img class="hot-content-item-images" :src="item.images.small" style="width:100px;height:142px;">
+                    <div class="hot-content-item-title">{{item.title}}</div>
+                    <div class="hot-content-item-score">{{item.rating.average}}</div>
+                    <div class="hot-content-item-rank" :style="styleObject">
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div class="hot-content">
-              <ul>
-                <li v-for="item in hotmovies" :key="item.id">
-                  <img class="hot-content-item-images" :src="item.images.small" style="width:100px;height:142px;">
-                  <div class="hot-content-item-title">{{item.title}}</div>
-                  <div class="hot-content-item-score">{{item.rating.average}}</div>
-                  <div class="hot-content-item-rank" :style="styleObject">
-                  </div>
-                </li>
-              </ul>
+          </section>
+        </li>
+        <li>
+          <section>
+            <div class="findgood">
+              <div class="findgood-title">发现好电影</div>
+              <div class="findgood-content">
+                <ul>
+                  <li style="margin-bottom:10px;margin-top:10px;">
+                    <a href="#" style="color: #FFC46C;border:1px solid #FFC46C">同时入选IMDB250和豆瓣电影250的电影</a>
+                    <a href="#" style="color: #4F9DED;border:1px solid #4F9DED">带你进入不正常的世界</a>
+                    <a href="#" style="color: #FFC46C;border:1px solid #FFC46C">用电【影】来祭奠逝去的岁月</a>
+                    <a href="#" style="color: #FF4055;border:1px solid #FF4055">女孩们的故事【电影】</a>
+                  </li>
+                  <li>
+                    <a href="#" style="color: #42BD56;border:1px solid #42BD56">使用 App 【找电影】功能</a>
+                    <a href="#" style="color: #2384E8;border:1px solid #2384E8">科幻是未来的钥匙——科幻启示录【科幻题材】</a>
+                    <a href="#" style="color: #CC3344;border:1px solid #CC3344">美国生活面面观</a>
+                    <a href="#" style="color: #42BD56;border:1px solid #42BD56">2015终极期待</a>
+                    <a href="#" style="color: #3BA94D;border:1px solid #3BA94D">经典韩国电影——收集100部</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
-        </section>
-      </li>
-      <li>
-        <section>
-          <div class="hot">
-            <div class="hot-title">
-              <div class="hot-title-left">影院热映</div>
-              <div class="hot-title-right">更多</div>
+          </section>
+        </li>
+        <li>
+          <section>
+            <div style="margin-top:70px;">
+              <div class="classify">分类浏览</div>
+              <div>
+                <ul class="groups">
+                  <li class="group">
+                    <a href="#">经典</a>
+                    <a href="#">冷门佳片</a>
+                  </li>
+                  <li class="group">
+                    <a href="#">豆瓣高分</a>
+                    <a href="#">动作</a>
+                  </li>
+                  <li class="group">
+                    <a href="#">喜剧</a>
+                    <a href="#">爱情</a>
+                  </li>
+                  <li class="group">
+                    <a href="#">悬疑</a>
+                    <a href="#">恐怖</a>
+                  </li>
+                  <li class="group">
+                    <a href="#">科幻</a>
+                    <a href="#">治愈</a>
+                  </li>
+                  <li class="group">
+                    <a href="#">文艺</a>
+                    <a href="#">成长</a>
+                  </li>
+                  <li class="group">
+                    <a href="#">动画</a>
+                    <a href="#">华语</a>
+                  </li>
+                  <li class="group">
+                    <a href="#">欧美</a>
+                    <a href="#">韩国</a>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div class="hot-content">
-              <ul>
-                <li v-for="item in hotmovies" :key="item.id">
-                  <img class="hot-content-item-images" :src="item.images.small" style="width:100px;height:142px;">
-                  <div class="hot-content-item-title">{{item.title}}</div>
-                  <div class="hot-content-item-score">{{item.rating.average}}</div>
-                  <div class="hot-content-item-rank" :style="styleObject">
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-      </li>
-      <li>
-        <section>
-          <div class="findgood">
-            <div class="findgood-title">发现好电影</div>
-            <div class="findgood-content">
-              <ul>
-                <li style="margin-bottom:10px;margin-top:10px;">
-                  <a href="#" style="color: #FFC46C;border:1px solid #FFC46C">同时入选IMDB250和豆瓣电影250的电影</a>
-                  <a href="#" style="color: #4F9DED;border:1px solid #4F9DED">带你进入不正常的世界</a>
-                  <a href="#" style="color: #FFC46C;border:1px solid #FFC46C">用电【影】来祭奠逝去的岁月</a>
-                  <a href="#" style="color: #FF4055;border:1px solid #FF4055">女孩们的故事【电影】</a>
-                </li>
-                <li>
-                  <a href="#" style="color: #42BD56;border:1px solid #42BD56">使用 App 【找电影】功能</a>
-                  <a href="#" style="color: #2384E8;border:1px solid #2384E8">科幻是未来的钥匙——科幻启示录【科幻题材】</a>
-                  <a href="#" style="color: #CC3344;border:1px solid #CC3344">美国生活面面观</a>
-                  <a href="#" style="color: #42BD56;border:1px solid #42BD56">2015终极期待</a>
-                  <a href="#" style="color: #3BA94D;border:1px solid #3BA94D">经典韩国电影——收集100部</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-      </li>
-      <li>
-        <section>
-          <div style="margin-top:70px;">
-            <div class="classify">分类浏览</div>
-            <div>
-              <ul class="groups">
-                <li class="group">
-                  <a href="#">经典</a>
-                  <a href="#">冷门佳片</a>
-                </li>
-                <li class="group">
-                  <a href="#">豆瓣高分</a>
-                  <a href="#">动作</a>
-                </li>
-                <li class="group">
-                  <a href="#">喜剧</a>
-                  <a href="#">爱情</a>
-                </li>
-                <li class="group">
-                  <a href="#">悬疑</a>
-                  <a href="#">恐怖</a>
-                </li>
-                <li class="group">
-                  <a href="#">科幻</a>
-                  <a href="#">治愈</a>
-                </li>
-                <li class="group">
-                  <a href="#">文艺</a>
-                  <a href="#">成长</a>
-                </li>
-                <li class="group">
-                  <a href="#">动画</a>
-                  <a href="#">华语</a>
-                </li>
-                <li class="group">
-                  <a href="#">欧美</a>
-                  <a href="#">韩国</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-      </li>
-      <li>
-        <section>
-          <span class="footer-icon">
-            <img src="https://img3.doubanio.com/f/talion/7837f29dd7deab9416274ae374a59bc17b5f33c6/pics/card/douban-app-logo.png">
-            <span class="footer-icon-text">豆瓣</span>
-          </span>
-          <div class="footer-detail">去 App Store 免费下载 iOS 客户端</div>
-        </section>
-      </li>
-    </ul>
+          </section>
+        </li>
+        <li>
+          <section>
+            <span class="footer-icon">
+              <img src="https://img3.doubanio.com/f/talion/7837f29dd7deab9416274ae374a59bc17b5f33c6/pics/card/douban-app-logo.png">
+              <span class="footer-icon-text">豆瓣</span>
+            </span>
+            <div class="footer-detail">去 App Store 免费下载 iOS 客户端</div>
+          </section>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
