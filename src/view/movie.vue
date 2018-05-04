@@ -183,7 +183,6 @@ export default {
     getIntheaters() {
       http.get(api.intheaters).then(res => {
         this.hotmovies = res.subjects;
-        // console.log(res);
       });
       // http.get(api.intheaters).then(res => {
       //   this.hotmovies = res.subjects;
