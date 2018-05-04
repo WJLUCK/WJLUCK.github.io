@@ -3,6 +3,7 @@
     <div v-for="item in hotmovies" :key="item.id" style="width:100px;height:100px">
       <img :src="item.images.small" alt="">
     </div>
+
     <!-- <ul>
       <li>
         <section>
@@ -187,15 +188,9 @@ export default {
       http.get(api.intheaters).then(res => {
         this.hotmovies = res.subjects;
       });
-      // http.get(api.intheaters).then(res => {
-      //   this.hotmovies = res.subjects;
-      //   console.log(this.hotmovies);
-      // });
     },
     getStar() {
       var star = document.getElementsByClassName("hot-content-item-score");
-      // console.log(star);
-      // console.log(star[1].innerHTML);
       for (var i = 0; i < star.length; i++) {
         if (star[i].innerHTML >= 8.5 && star[i].innerHTML <= 10) {
           this.position = 0;
