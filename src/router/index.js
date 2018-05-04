@@ -11,6 +11,9 @@ import LOGIN from "@/view/login.vue";
 Vue.use(Router);
 
 export default new Router({
+  // mode: "history",
+  // base: "/system/",
+  // scrollBehavior: () => ({ y: 0 }),
   routes: [
     {
       path: "/",

@@ -62,7 +62,7 @@ export default {
   methods: {
     getCity() {
       http.get(api.cityHot).then(res => {
-        this.articleList = res.data.events;
+        this.articleList = res.events;
         // console.log(res);
       });
     }

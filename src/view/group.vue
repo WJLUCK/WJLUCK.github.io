@@ -25,7 +25,7 @@ export default {
   methods: {
     getIntheaters() {
       http.get(api.intheaters).then(res => {
-        this.hotmovies = res.data.subjects;
+        this.hotmovies = res.subjects;
       });
     }
   }

@@ -13,7 +13,7 @@ const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 
 var SWPrecacheWebpackPlugin = require("sw-precache-webpack-plugin");
 
-const PUBLIC_PATH = "https://www.my-project-name.com/";
+// const PUBLIC_PATH = "https://www.my-project-name.com/";
 
 const env = require("../config/prod.env");
 
@@ -28,8 +28,7 @@ const webpackConfig = merge(baseWebpackConfig, {
   devtool: config.build.productionSourceMap ? config.build.devtool : false,
   output: {
     path: config.build.assetsRoot,
-    filename: utils.assetsPath("js/[name].[chunkhash].js"),
-    publicPath: PUBLIC_PATH
+    filename: utils.assetsPath("js/[name].[chunkhash].js")
     // chunkFilename: utils.assetsPath("js/[id].[chunkhash].js")
   },
   plugins: [
@@ -52,13 +51,14 @@ const webpackConfig = merge(baseWebpackConfig, {
       dontCacheBustUrlsMatching: /\.\w{8}\./,
       filename: "service-worker.js",
       minify: true,
-      navigateFallback: PUBLIC_PATH + "index.html",
+      navigateFallback: "index.html",
       staticFileGlobsIgnorePatterns: [/\.map$/, /asset-manifest\.json$/]
     }),
 
     // extract css into its own file
     new ExtractTextPlugin({
-      filename: utils.assetsPath("css/[name].[contenthash].css"),
+      filename: "[name].[contenthash].css",
+      // filename: utils.assetsPath("css/[name].[contenthash].css"),
       // Setting the following option to `false` will not extract CSS from codesplit chunks.
       // Their CSS will instead be inserted dynamically with style-loader when the codesplit chunk has been loaded by webpack.
       // It's currently set to `true` because we are seeing that sourcemaps are included in the codesplit bundle as well when it's `false`,
@@ -82,7 +82,7 @@ const webpackConfig = merge(baseWebpackConfig, {
       minify: {
         removeComments: true,
         collapseWhitespace: true,
-        removeAttributeQuotes: false
+        removeAttributeQuotes: true
         // more options:
         // https://github.com/kangax/html-minifier#options-quick-reference
       },
