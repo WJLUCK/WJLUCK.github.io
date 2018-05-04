@@ -1,7 +1,6 @@
 <template>
   <div>
-    <div>hhhhhh</div>
-    <div class="wrapper" ref="wrapper">
+    <div>
       <ul>
         <li>
           <section>
@@ -179,7 +178,7 @@ export default {
   },
   mounted() {
     this.$nextTick(() => {
-      this.scroll = new BScroll(this.$refs.wrapper, {});
+      // this.scroll = new BScroll(this.$refs.wrapper, {});
     });
   },
   methods: {
