@@ -10,12 +10,12 @@
   "scope": "/",
   "icons": [
     {
-      "src": "/static/apple-icon-144.png",
+      "src": "/go/static/apple-icon-144.png",
       "sizes": "144x144",
       "type": "image/png"
     },
     {
-      "src": "/static/apple-icon-114.png",
+      "src": "/go/static/apple-icon-114.png",
       "sizes": "114x114",
       "type": "image/png"
     }
