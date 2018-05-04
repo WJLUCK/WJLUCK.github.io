@@ -47,10 +47,14 @@ export default {
     });
   },
   created() {
-    this.getbooks();
+    // this.getbooks();
   },
   methods: {
-    getbooks() {}
+    getbooks() {
+      http.get(api.books).then(res => {
+        this.bookList = res.subjects;
+      });
+    }
   }
 };
 </script>
