@@ -1,12 +1,12 @@
 var cacheName = "douban";
 
 var filesToCache = [
-  "/",
-  "/index.html",
-  "/src/main.js",
-  "/styles/logo.css",
-  "/images/search.png",
-  "/images/star.png"
+  "/go",
+  "/go/index.html",
+  "/go/src/main.js",
+  "/go/styles/logo.css",
+  "/go/images/search.png",
+  "/go/images/star.png"
 ];
 
 self.addEventListener("install", function(e) {
