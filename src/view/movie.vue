@@ -1,6 +1,9 @@
 <template>
   <div class="wrapper" ref="wrapper">
-    <ul>
+    <div v-for="item in hotmovies" :key="item.id">
+      <img :src="item.images.small" alt="">
+    </div>
+    <!-- <ul>
       <li>
         <section>
           <div class="hot">
@@ -140,7 +143,7 @@
           <div class="footer-detail">去 App Store 免费下载 iOS 客户端</div>
         </section>
       </li>
-    </ul>
+    </ul> -->
   </div>
 </template>
 
@@ -170,9 +173,9 @@ export default {
   },
   created() {
     this.getIntheaters();
-    setTimeout(() => {
-      this.getStar();
-    }, 5000);
+    // setTimeout(() => {
+    //   this.getStar();
+    // }, 5000);
   },
   mounted() {
     this.$nextTick(() => {

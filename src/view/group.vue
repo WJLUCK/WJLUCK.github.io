@@ -1,10 +1,7 @@
 <template>
   <div class="group">
     group
-    <!-- <img src="https://img3.doubanio.com/view/subject/s/public/s29479476.jpg" style="width: 100px; height: 142px;"> -->
-    <!-- <img src="../assets/apple-icon-114.png" alt=""> -->
     <div v-for="item in hotmovies" :key="item.id">
-      <!-- <p>{{item.title}}</p> -->
       <img :src="item.images.small" alt="">
     </div>
   </div>
